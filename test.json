@@ -1,0 +1,1852 @@
+{
+    "info": "OK",
+    "msg": "Success",
+    "data": [
+      {
+        "currency_name": "Bitcoin",
+        "symbol": "BTC",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Litecoin",
+        "symbol": "LTC",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Tether ",
+        "symbol": "USDT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ethereum",
+        "symbol": "ETH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Dogecoin",
+        "symbol": "DOGE",
+        "keyType": ""
+      },
+      {
+        "currency_name": "United States dollar",
+        "symbol": "USD",
+        "keyType": "FIAT"
+      },
+      {
+        "currency_name": "Cardano",
+        "symbol": "ADA",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Ethereum token",
+        "symbol": "AAVE",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Bitcoin Cash",
+        "symbol": "BCH",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Bitcoin Gold",
+        "symbol": "BTG",
+        "keyType": ""
+      },
+      {
+        "currency_name": "4ArtCoin",
+        "symbol": "4ART",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Australian dollar",
+        "symbol": "AUD",
+        "keyType": "FIAT"
+      },
+      {
+        "currency_name": "Algorand",
+        "symbol": "ALGO",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Ace Token",
+        "symbol": "ACE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ABBC Coin",
+        "symbol": "ABBC",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Alpha Quark Token",
+        "symbol": "AQT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ac Exchange Token",
+        "symbol": "ACXT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Aeternity ",
+        "symbol": "AE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Aergo ",
+        "symbol": "AERGO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ArcBlock ",
+        "symbol": "ABT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AGARWOOD ",
+        "symbol": "AGWD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AION ",
+        "symbol": "AION",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Amon ",
+        "symbol": "AMN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AMO Token ",
+        "symbol": "AMO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AMP Token ",
+        "symbol": "AMP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AmonD ",
+        "symbol": "AMON",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Amplify Exchange ",
+        "symbol": "AMPX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ANA ",
+        "symbol": "ANA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Aragon ",
+        "symbol": "ANT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Aurora ",
+        "symbol": "AOA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AppCoins ",
+        "symbol": "APPC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ArCoin US Treasury ",
+        "symbol": "ARCT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AirSwap ",
+        "symbol": "AST",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Audio ",
+        "symbol": "AUDIO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Australian Dollar ",
+        "symbol": "AUDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "aXpire ",
+        "symbol": "AXPR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BSV",
+        "symbol": "BSV",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Balancer ",
+        "symbol": "BAL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Band Protocol ",
+        "symbol": "BAND",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BASIC Token ",
+        "symbol": "BASIC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Basic Attention Token ",
+        "symbol": "BAT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BABB ",
+        "symbol": "BAX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BBX ",
+        "symbol": "BBX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BCAP ",
+        "symbol": "BCAP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Blockchain.io ",
+        "symbol": "BCIO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BetProtocol ",
+        "symbol": "BEPRO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Blockbid ",
+        "symbol": "BID",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Blockbid Liquidity ",
+        "symbol": "BIDL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BirdCoin ",
+        "symbol": "BIRD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bankera ",
+        "symbol": "BNK",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BitNational ",
+        "symbol": "BNL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bancor ",
+        "symbol": "BNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bounty0x ",
+        "symbol": "BNTY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CELO",
+        "symbol": "CELO",
+        "keyType": ""
+      },
+      {
+        "currency_name": "ContentBox ",
+        "symbol": "BOX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Brazilian Digital Token ",
+        "symbol": "BRZ",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bistox Exchange Token ",
+        "symbol": "BSX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Blocktrade ",
+        "symbol": "BTT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "BTU Protocol ",
+        "symbol": "BTU",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bread ",
+        "symbol": "BRD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Binance USD ",
+        "symbol": "BUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Buying.com ",
+        "symbol": "BUY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "C8 Plus ",
+        "symbol": "C8P",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Canadian Dollar ",
+        "symbol": "CADX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Celo USD ",
+        "symbol": "CUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Change ",
+        "symbol": "CAG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound BAT ",
+        "symbol": "CBAT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CashBet Coin ",
+        "symbol": "CBC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Crypto BRL ",
+        "symbol": "CBRL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cyber Credit Token ",
+        "symbol": "CCT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CannDollar ",
+        "symbol": "CDAG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound DAI ",
+        "symbol": "CDAI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Blox ",
+        "symbol": "CDT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Celsius ",
+        "symbol": "CEL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound Ether ",
+        "symbol": "CETH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Swiss Frank ",
+        "symbol": "CHFX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "SwissBorg ",
+        "symbol": "CHSB",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cryptoindex 100 ",
+        "symbol": "CIX100",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Colu Local Network ",
+        "symbol": "CLN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CoinLoan ",
+        "symbol": "CLT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Chinese Yuan ",
+        "symbol": "CNYX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound Token ",
+        "symbol": "COMP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cover ",
+        "symbol": "COVER",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cryptopay ",
+        "symbol": "CPAY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Coineru Platinum ",
+        "symbol": "CPLT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Coinquista Coin ",
+        "symbol": "CQX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CarryToken ",
+        "symbol": "CRE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cream ",
+        "symbol": "CREAM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound Augur ",
+        "symbol": "CREP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Crypto.com Chain ",
+        "symbol": "CRO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Curve DAO ",
+        "symbol": "CRV",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Crypterium ",
+        "symbol": "CRPT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CRPT ",
+        "symbol": "CRPT1",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Coineru Silver ",
+        "symbol": "CSLV",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Caspian Token ",
+        "symbol": "CSP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound USDC ",
+        "symbol": "CUSDC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Civic ",
+        "symbol": "CVC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound WBTC ",
+        "symbol": "CWBTC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Compound ZRX ",
+        "symbol": "CZRX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Dai ",
+        "symbol": "DAI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Streamr DATACoin ",
+        "symbol": "DATA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Dark Energy Crystals ",
+        "symbol": "DEC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Dent ",
+        "symbol": "DENT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Dgcl ",
+        "symbol": "DGCL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "DigixDAO ",
+        "symbol": "DGD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Digix ",
+        "symbol": "DGX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "DMarket ",
+        "symbol": "DMT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "DRP Utility ",
+        "symbol": "DRPU",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Drive ",
+        "symbol": "DRV",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Dx1u ",
+        "symbol": "DX1U",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "DYN Token ",
+        "symbol": "DYN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Easy ",
+        "symbol": "EASY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "EOS",
+        "symbol": "EOS",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "keyType": ""
+      },
+      {
+        "currency_name": "eChat ",
+        "symbol": "ECHT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Edison ",
+        "symbol": "EDISON",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Eden ",
+        "symbol": "EDN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Endor Protocol ",
+        "symbol": "EDR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eGold ",
+        "symbol": "EGL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Elrond Gold ",
+        "symbol": "EGLD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Aelf ",
+        "symbol": "ELF",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "EMX ",
+        "symbol": "EMX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "euro",
+        "symbol": "EURO",
+        "keyType": "FIAT"
+      },
+      {
+        "currency_name": "Enigma ",
+        "symbol": "ENG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Enjin ",
+        "symbol": "ENJ",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ethos ",
+        "symbol": "ETHOS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ecotech Visions ",
+        "symbol": "ETV",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Stasis EURS ",
+        "symbol": "EURS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Euro ",
+        "symbol": "EURX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "EUR Stable Token ",
+        "symbol": "EUX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "EXE Token ",
+        "symbol": "EXE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Fetch ",
+        "symbol": "FET",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Fight to Fame Token ",
+        "symbol": "FFT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Formosa Financial ",
+        "symbol": "FMF",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Fantom Token ",
+        "symbol": "FTM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "FTX Token ",
+        "symbol": "FTT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "FunFair ",
+        "symbol": "FUN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "FXRT ",
+        "symbol": "FXRT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Pound Sterling ",
+        "symbol": "GBPX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "DAOstack ",
+        "symbol": "GEN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Genohub",
+        "symbol": "GHUB",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "GBP",
+        "symbol": "GBP",
+        "keyType": "FIAT"
+      },
+      {
+        "currency_name": "eToro Gold ",
+        "symbol": "GLDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "GECoin",
+        "symbol": "GEC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Gnosis ",
+        "symbol": "GNO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Golem ",
+        "symbol": "GNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "GoExchange ",
+        "symbol": "GOT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Gifto ",
+        "symbol": "GTO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Gemini Dollar ",
+        "symbol": "GUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Game X Coin ",
+        "symbol": "GXC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Huobi Token ",
+        "symbol": "HEDG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Hong Kong Dollar ",
+        "symbol": "HKDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "HalalChain ",
+        "symbol": "HLC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Hold ",
+        "symbol": "HOLD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Holo ",
+        "symbol": "HOT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "HyperQuant ",
+        "symbol": "HQT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Decision Token ",
+        "symbol": "HST",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Huobi Token ",
+        "symbol": "HT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "HumanScape ",
+        "symbol": "HUM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Hxro ",
+        "symbol": "HXRO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Hybrid Block ",
+        "symbol": "HYB",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Hydro ",
+        "symbol": "HYDRO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "i8 Exchange Token ",
+        "symbol": "I8",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "IDEX Exchange Token ",
+        "symbol": "IDEX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Idrc ",
+        "symbol": "IDRC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Royal Mint Gold",
+        "symbol": "RMG",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Rupiah Token ",
+        "symbol": "IDRT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "InternationalCryptoX ",
+        "symbol": "INCX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Indorse ",
+        "symbol": "IND",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Infinitus Token ",
+        "symbol": "INF",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "INX Token ",
+        "symbol": "INX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Susnova ",
+        "symbol": "ISF",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Insureum ",
+        "symbol": "ISR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ivy Koin ",
+        "symbol": "IVY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Japanese yen (JPY)",
+        "symbol": "JPY",
+        "keyType": "FIAT"
+      },
+      {
+        "currency_name": "Japan Brand Coin ",
+        "symbol": "JBC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "JFIN Coin ",
+        "symbol": "JFIN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Japanese Yen ",
+        "symbol": "JPYX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "SelfKey ",
+        "symbol": "KEY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Kin ",
+        "symbol": "KIN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Kyber Network ",
+        "symbol": "KNC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "KOZJIN Token ",
+        "symbol": "KOZ",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Kp3r ",
+        "symbol": "KP3R",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Almeela ",
+        "symbol": "KZE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cred ",
+        "symbol": "LBA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "EthLend ",
+        "symbol": "LEND",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bitfinex LEO ",
+        "symbol": "LEO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Lynchpin",
+        "symbol": "LYN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "LGO Exchange ",
+        "symbol": "LGO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Chainlink ",
+        "symbol": "LINK",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CoinLion ",
+        "symbol": "LION",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Linker Coin ",
+        "symbol": "LNC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Loom Network ",
+        "symbol": "LOOM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Loopring ",
+        "symbol": "LRC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "DAI ",
+        "symbol": "MCDAI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Monnos Token",
+        "symbol": "MNS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Matic Token ",
+        "symbol": "MATIC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Crypto.com ",
+        "symbol": "MCO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "MachiX ",
+        "symbol": "MCX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Mandala ",
+        "symbol": "MDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Medibloc ",
+        "symbol": "MEDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "SyncFab ",
+        "symbol": "MFG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Mainframe ",
+        "symbol": "MFT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "MFPH Token ",
+        "symbol": "MFPH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "MixMarvel Token ",
+        "symbol": "MIX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Milkv2 ",
+        "symbol": "MILKV2",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Maker ",
+        "symbol": "MKR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Metronome ",
+        "symbol": "MET",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Metadium ",
+        "symbol": "META",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Mithril ",
+        "symbol": "MITH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Moss Coin ",
+        "symbol": "MOC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "MenaPay ",
+        "symbol": "MPAY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Multiven ",
+        "symbol": "MTCN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Metal ",
+        "symbol": "MTL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "mStable USD ",
+        "symbol": "MUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Mass Vehicle Ledger ",
+        "symbol": "MVL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Nebulas ",
+        "symbol": "NAS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Nexo ",
+        "symbol": "NEXO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Neumark ",
+        "symbol": "NEU",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Naira Token ",
+        "symbol": "NGNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "IONIAX Token ",
+        "symbol": "NIAX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Numeraire ",
+        "symbol": "NMR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Pundi X ",
+        "symbol": "NPXS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "NuCypher ",
+        "symbol": "NU",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro New Zealand Dollar ",
+        "symbol": "NZDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ocean ",
+        "symbol": "OCEAN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ocean V2",
+        "symbol": "OCEANV2",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Om ",
+        "symbol": "OM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "OmiseGo ",
+        "symbol": "OMG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "On.Live ",
+        "symbol": "ONL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "OPTin Token ",
+        "symbol": "OPT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Orai ",
+        "symbol": "ORAI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Orbs Token ",
+        "symbol": "ORBS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Orchid ",
+        "symbol": "OXT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Blockpass ",
+        "symbol": "PASS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegGold Token ",
+        "symbol": "PAU",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Paxos ",
+        "symbol": "PAX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Paxos Gold ",
+        "symbol": "PAXG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegBitcoin Cash Token ",
+        "symbol": "PBCH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Opiria Token ",
+        "symbol": "PDATA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PumaPay ",
+        "symbol": "PMA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegBitcoin Token ",
+        "symbol": "PBTC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegNet ",
+        "symbol": "PEG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegEthereum Token ",
+        "symbol": "PETH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PlusCoin ",
+        "symbol": "PLC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegFactom Token ",
+        "symbol": "PFCT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Planet ",
+        "symbol": "PLANET",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Polish Zloty ",
+        "symbol": "PLNX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PLN Stable Token ",
+        "symbol": "PLX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Polymath ",
+        "symbol": "POLY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Power Ledger ",
+        "symbol": "POWR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Populous ",
+        "symbol": "PPT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PRDX Token ",
+        "symbol": "PRDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Propy ",
+        "symbol": "PRO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Protos ",
+        "symbol": "PRTS",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "PegUSD Token ",
+        "symbol": "PUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "QASH ",
+        "symbol": "QASH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "QCAD ",
+        "symbol": "QCAD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Quadrans ",
+        "symbol": "QDT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Quantum ",
+        "symbol": "QRL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Quantstamp ",
+        "symbol": "QSP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Qvolta ",
+        "symbol": "QVT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ruby X ",
+        "symbol": "RBY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Raiden Network Token ",
+        "symbol": "RDN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Regblo ",
+        "symbol": "REB",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Rebellious ",
+        "symbol": "REBL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Augur ",
+        "symbol": "REP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Augur V2 ",
+        "symbol": "REPV2",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Refereum ",
+        "symbol": "RFR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Ringx Token ",
+        "symbol": "RINGX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "RLC ",
+        "symbol": "RLC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "RONCoin ",
+        "symbol": "RONC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ROOBEE ",
+        "symbol": "ROOBEE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Russian Ruble ",
+        "symbol": "RUBX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Salt ",
+        "symbol": "SALT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Sashimi ",
+        "symbol": "SASHIMI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Saga ",
+        "symbol": "SGA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Singapore Dollar ",
+        "symbol": "SGDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Sogur ",
+        "symbol": "SGR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "iShook ",
+        "symbol": "SHK",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ShareToken ",
+        "symbol": "SHR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Sih ",
+        "symbol": "SIH",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "SKALE Network ",
+        "symbol": "SKALE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "AlphaSlot ",
+        "symbol": "SLOT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Silver ",
+        "symbol": "SLVX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "SunContract ",
+        "symbol": "SNC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Snovio ",
+        "symbol": "SNOV",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Status Network Token ",
+        "symbol": "SNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Synthetix Network ",
+        "symbol": "SNX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "SODACoin ",
+        "symbol": "SOC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Sparrow Options ",
+        "symbol": "SPO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Solve Token ",
+        "symbol": "SOLVE",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Serenity ",
+        "symbol": "SRNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Storj ",
+        "symbol": "STORJ",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Storm ",
+        "symbol": "STORM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Sushi ",
+        "symbol": "SUSHI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Swipe ",
+        "symbol": "SXP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TRON",
+        "symbol": "TRX",
+        "keyType": ""
+      },
+      {
+        "currency_name": "Two Prime FF1 ",
+        "symbol": "FF1",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TenX ",
+        "symbol": "PAY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TrueAUD ",
+        "symbol": "TAUD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TrueCAD ",
+        "symbol": "TCAD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Think Coin ",
+        "symbol": "TCO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tokenomy ",
+        "symbol": "TEN",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TenX Token ",
+        "symbol": "TENX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TrueGBP ",
+        "symbol": "TGBP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TrueHKD ",
+        "symbol": "THKD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Trade Token X ",
+        "symbol": "TIOX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tknt ",
+        "symbol": "TKNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tokenize ",
+        "symbol": "TKX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tierion ",
+        "symbol": "TNT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "WeTrust ",
+        "symbol": "TRST",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tru ",
+        "symbol": "TRU",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Bilira Token ",
+        "symbol": "TRYB",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro Turkish Lira ",
+        "symbol": "TRYX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TrueUSD ",
+        "symbol": "TUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Uptrennd Token ",
+        "symbol": "1UP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Unicorn AIR Security Token",
+        "symbol": "UAIR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Uniswap Token",
+        "symbol": "UNI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "UnirisToken ",
+        "symbol": "UCO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "UnikoinGold ",
+        "symbol": "UKG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "UMA Voting V1",
+        "symbol": "UMA",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "UpToken ",
+        "symbol": "UP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Universal Bitcoin ",
+        "symbol": "UPBTC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Sentinel Protocol ",
+        "symbol": "UPP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Universal Protocol Token ",
+        "symbol": "UPT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Universal US Dollar ",
+        "symbol": "UPUSD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Uquid Coin ",
+        "symbol": "UQC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Unicorn Tokenization Robinhood Shares ",
+        "symbol": "URHD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "USD Coin ",
+        "symbol": "USDC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro United States Dollar ",
+        "symbol": "USDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "US Gold ",
+        "symbol": "USG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "USPX Token ",
+        "symbol": "USPX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "TerraUSD ",
+        "symbol": "UST",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "USD Stable Token ",
+        "symbol": "USX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "UTrust ",
+        "symbol": "UTK",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "UTrust ",
+        "symbol": "UTK1",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "ValorToken ",
+        "symbol": "VALOR",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Vodi X ",
+        "symbol": "VDX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "VroomGo ",
+        "symbol": "VRGX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Vinx ",
+        "symbol": "VXC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Wafl Token ",
+        "symbol": "WAFL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Worldwide Asset eXchange ",
+        "symbol": "WAX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tael Token ",
+        "symbol": "WABI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Wrapped Bitcoin ",
+        "symbol": "WBTC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "We Show Token ",
+        "symbol": "WET",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Whatshalal ",
+        "symbol": "WHT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "WalletPlusX ",
+        "symbol": "WPX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "WaltonChain ",
+        "symbol": "WTC",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "XLM",
+        "symbol": "XLM",
+        "keyType": ""
+      },
+      {
+        "currency_name": "XBullion Token ",
+        "symbol": "GOLD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "XBullion Token ",
+        "symbol": "XBGOLD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CapdaxToken ",
+        "symbol": "XCD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Cross Exchange Token ",
+        "symbol": "XEX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Rialto ",
+        "symbol": "XRL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "StraitsX ",
+        "symbol": "XSGD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Tap ",
+        "symbol": "XTP",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Yearn.Finance ",
+        "symbol": "YFI",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "YFII.Finance ",
+        "symbol": "YFII",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Yld ",
+        "symbol": "YLD",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Young Token ",
+        "symbol": "YNG",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "YSEY Utility Token ",
+        "symbol": "YSEY",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "eToro South African Rand ",
+        "symbol": "ZARX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Zebi Coin ",
+        "symbol": "ZCO",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Zilliqa ",
+        "symbol": "ZIL",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Zeex ",
+        "symbol": "ZIX",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "Zipmex Token ",
+        "symbol": "ZMT",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "CoinZoom ",
+        "symbol": "ZOOM",
+        "keyType": "ERC20"
+      },
+      {
+        "currency_name": "0x ",
+        "symbol": "ZRX",
+        "keyType": "ERC20"
+      }
+    ],
+    "errors": []
+  }
