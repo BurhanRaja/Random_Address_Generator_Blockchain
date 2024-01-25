@@ -4,6 +4,19 @@ const { BIP32Factory } = require("bip32");
 const ethers = require("ethers");
 const bitcoin = require("bitcoinjs-lib");
 const { ECPairFactory } = require("ecpair");
+const secp256k1 = require('secp256k1');
+const TronWeb = require("tronweb");
+
+const bip32 = BIP32Factory(ecc);
+
+const HttpProvider = TronWeb.providers.HttpProvider;
+const fullNode = new HttpProvider('https://nile.trongrid.io/');
+const solidityNode = new HttpProvider('https://nile.trongrid.io/');
+const eventServer = 'https://nile.trongrid.io/';
+const tronWeb = new TronWeb(fullNode, solidityNode, eventServer);
+
+
+// console.log(tronWeb);
 
 function generateMnemonicPhrase() {
   return bip39.generateMnemonic();
@@ -18,6 +31,47 @@ function generateBNBKeysFromMnemonic(mnemonic) {
     publicKey: wallet.publicKey,
     address: wallet.address,
   };
+}
+
+async function generateTronAccount(mnemonic) {
+
+  const path = "m/44'/195'/0'/0/1";
+  const data = tronWeb.fromMnemonic(mnemonic, path);
+
+  return {
+    address: data.address,
+    privateKey: data.privateKey,
+    publicKey: data.publicKey
+  }
+}
+
+async function getTronTransactionHistory(address) {
+  try {
+    // Get transactions
+    let allTransactions = [];
+
+    // Get the current block height
+    const currentBlock = await tronWeb.trx.getCurrentBlock();
+
+    // Iterate through each block
+    for (let blockNumber = 0; blockNumber <= currentBlock.block_header.raw_data.number; blockNumber++) {
+        // Get block details
+        const block = await tronWeb.trx.getBlock(blockNumber);
+        if (block && block.transactions) {
+            // Filter transactions involving the specified address
+            const transactions = block.transactions.filter(tx => 
+                tx.raw_data.contract.filter(contract => 
+                    contract.type === 'TransferContract' &&
+                    (contract.parameter.value.to === address || contract.parameter.value.owner_address === address)
+                ).length > 0
+            );
+            allTransactions = allTransactions.concat(transactions);
+        }
+    }
+    return allTransactions;
+  } catch (error) {
+    throw error;
+  }
 }
 
 function generateEthereumFromMnemonic(mnemonic) {
@@ -55,15 +109,20 @@ function generateBitcoinAddressFromMnemonic(mnemonic) {
   };
 }
 
-const mnemonic = generateMnemonicPhrase();
+// const mnemonic = generateMnemonicPhrase();
+// console.log(mnemonic);
+
 const seed = ethers.Mnemonic.fromPhrase(
   "end tonight viable energy mother keep one phrase excite evolve exclude carbon"
 );
-const bnbKeys = generateBNBKeysFromMnemonic(seed);
-console.log(bnbKeys);
+// const bnbKeys = generateBNBKeysFromMnemonic(seed);
+// console.log(bnbKeys);
 
-const bitcoinKeys = generateBitcoinAddressFromMnemonic(mnemonic);
-console.log(bitcoinKeys);
+// const bitcoinKeys = generateBitcoinAddressFromMnemonic(mnemonic);
+// console.log(bitcoinKeys);
 
-const ethreumKeys = generateEthereumFromMnemonic(seed);
-console.log(ethreumKeys);
+// const ethreumKeys = generateEthereumFromMnemonic(seed);
+// console.log(ethreumKeys);
+
+// generateTronAccount("end tonight viable energy mother keep one phrase excite evolve exclude carbon").then((data) => console.log(data));
+getTronTransactionHistory("").then((data) => console.log(data).catch((err) => console.log(err)));
