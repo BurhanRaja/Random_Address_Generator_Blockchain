@@ -5,6 +5,7 @@ const ethers = require("ethers");
 const bitcoin = require("bitcoinjs-lib");
 const { ECPairFactory } = require("ecpair");
 const secp256k1 = require('secp256k1');
+const axios = require("axios")
 const TronWeb = require("tronweb");
 
 const bip32 = BIP32Factory(ecc);
@@ -47,30 +48,19 @@ async function generateTronAccount(mnemonic) {
 
 async function getTronTransactionHistory(address) {
   try {
-    // Get transactions
-    let allTransactions = [];
-
-    // Get the current block height
-    const currentBlock = await tronWeb.trx.getCurrentBlock();
-
-    // Iterate through each block
-    for (let blockNumber = 0; blockNumber <= currentBlock.block_header.raw_data.number; blockNumber++) {
-        // Get block details
-        const block = await tronWeb.trx.getBlock(blockNumber);
-        if (block && block.transactions) {
-            // Filter transactions involving the specified address
-            const transactions = block.transactions.filter(tx => 
-                tx.raw_data.contract.filter(contract => 
-                    contract.type === 'TransferContract' &&
-                    (contract.parameter.value.to === address || contract.parameter.value.owner_address === address)
-                ).length > 0
-            );
-            allTransactions = allTransactions.concat(transactions);
-        }
-    }
-    return allTransactions;
+    const data = await axios.get(`https://nile.trongrid.io/v1/accounts/${address}/transactions`)
+    return data.data;
   } catch (error) {
     throw error;
+  }
+}
+
+async function getTronAccountBalance(address) {
+  try {
+    const response = await tronWeb.trx.getBalance(address);
+    return (tronWeb.BigNumber(response)).toNumber();
+  } catch (err) {
+    throw err;
   }
 }
 
@@ -125,4 +115,10 @@ const seed = ethers.Mnemonic.fromPhrase(
 // console.log(ethreumKeys);
 
 // generateTronAccount("end tonight viable energy mother keep one phrase excite evolve exclude carbon").then((data) => console.log(data));
-getTronTransactionHistory("").then((data) => console.log(data).catch((err) => console.log(err)));
+getTronTransactionHistory("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => {
+  console.log(data)
+  for (let i = 0; i < data['data'].length; i++) {
+    console.log(data['data'][i]["raw_data"]);
+  }
+});
+getTronAccountBalance("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => console.log("Balance", data));
