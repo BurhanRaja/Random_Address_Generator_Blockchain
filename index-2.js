@@ -49,7 +49,11 @@ async function generateTronAccount(mnemonic) {
 async function getTronTransactionHistory(address) {
   try {
     const data = await axios.get(`https://nile.trongrid.io/v1/accounts/${address}/transactions`)
-    return data.data;
+    const trc20Data = await axios.get(`https://nile.trongrid.io/v1/accounts/${address}/transactions/trc20?limit=100&contract_address=TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj`)
+    return {
+      normalTransaction: data.data,
+      trc20TransactionData: trc20Data.data
+    };
   } catch (error) {
     throw error;
   }
@@ -116,9 +120,16 @@ const seed = ethers.Mnemonic.fromPhrase(
 
 // generateTronAccount("end tonight viable energy mother keep one phrase excite evolve exclude carbon").then((data) => console.log(data));
 getTronTransactionHistory("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => {
-  console.log(data)
-  for (let i = 0; i < data['data'].length; i++) {
-    console.log(data['data'][i]["raw_data"]);
-  }
+  // console.log(data)
+  // for (let i = 0; i < data["normalTransaction"]['data'].length; i++) {
+  //   console.log(data["normalTransaction"]['data'][i]["raw_data"]);
+  //   console.log(data["normalTransaction"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
+  // }
+  console.log(data["trc20TransactionData"]['data'])
+  // for (let i = 0; i < data["trc20TransactionData"]['data'].length; i++) {
+    // console.log(data["trc20TransactionData"]['data'][i]["raw_data"]);
+    // console.log(data["trc20TransactionData"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
+  // }
 });
 getTronAccountBalance("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => console.log("Balance", data));
+console.log(tronWeb.address.toHex("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT"));
