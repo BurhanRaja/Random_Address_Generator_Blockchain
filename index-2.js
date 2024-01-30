@@ -23,16 +23,16 @@ function generateMnemonicPhrase() {
   return bip39.generateMnemonic();
 }
 
-function generateBNBKeysFromMnemonic(mnemonic) {
-  const path = "m/44'/60'/0'/0/1"; // BIP-44 path for BNB
-  const wallet = ethers.HDNodeWallet.fromMnemonic(mnemonic, path);
+// function generateBNBKeysFromMnemonic(mnemonic) {
+//   const path = "m/44'/60'/0'/0/1"; // BIP-44 path for BNB
+//   const wallet = ethers.HDNodeWallet.fromMnemonic(mnemonic, path);
 
-  return {
-    privateKey: wallet.privateKey,
-    publicKey: wallet.publicKey,
-    address: wallet.address,
-  };
-}
+//   return {
+//     privateKey: wallet.privateKey,
+//     publicKey: wallet.publicKey,
+//     address: wallet.address,
+//   };
+// }
 
 async function generateTronAccount(mnemonic) {
 
@@ -68,40 +68,40 @@ async function getTronAccountBalance(address) {
   }
 }
 
-function generateEthereumFromMnemonic(mnemonic) {
-  const masterNode = ethers.HDNodeWallet.fromMnemonic(mnemonic);
-  const childNode = masterNode.derivePath("m/0");
+// function generateEthereumFromMnemonic(mnemonic) {
+//   const masterNode = ethers.HDNodeWallet.fromMnemonic(mnemonic);
+//   const childNode = masterNode.derivePath("m/0");
 
-  return {
-    privateKey: childNode.privateKey,
-    publicKey: childNode.publicKey,
-    address: childNode.address,
-  };
-}
+//   return {
+//     privateKey: childNode.privateKey,
+//     publicKey: childNode.publicKey,
+//     address: childNode.address,
+//   };
+// }
 
-function generateBitcoinAddressFromMnemonic(mnemonic) {
-  const seed = bip39.mnemonicToSeedSync(mnemonic);
-  const bip32 = BIP32Factory(ecc);
+// function generateBitcoinAddressFromMnemonic(mnemonic) {
+//   const seed = bip39.mnemonicToSeedSync(mnemonic);
+//   const bip32 = BIP32Factory(ecc);
 
-  const rootNode = bip32.fromSeed(seed);
-  const childNode = rootNode.derivePath("m/0/0"); // Derive a specific child node (change as needed)
+//   const rootNode = bip32.fromSeed(seed);
+//   const childNode = rootNode.derivePath("m/0/0"); // Derive a specific child node (change as needed)
 
-  const ECPair = ECPairFactory(ecc);
+//   const ECPair = ECPairFactory(ecc);
 
-  const privateKey = childNode.privateKey.toString("hex");
-  const publicKey = ECPair.fromPrivateKey(
-    childNode.privateKey
-  ).publicKey.toString("hex");
-  const address = bitcoin.payments.p2pkh({
-    pubkey: childNode.publicKey,
-  }).address;
+//   const privateKey = childNode.privateKey.toString("hex");
+//   const publicKey = ECPair.fromPrivateKey(
+//     childNode.privateKey
+//   ).publicKey.toString("hex");
+//   const address = bitcoin.payments.p2pkh({
+//     pubkey: childNode.publicKey,
+//   }).address;
 
-  return {
-    privateKey,
-    publicKey,
-    address,
-  };
-}
+//   return {
+//     privateKey,
+//     publicKey,
+//     address,
+//   };
+// }
 
 // const mnemonic = generateMnemonicPhrase();
 // console.log(mnemonic);
@@ -118,13 +118,15 @@ const seed = ethers.Mnemonic.fromPhrase(
 // const ethreumKeys = generateEthereumFromMnemonic(seed);
 // console.log(ethreumKeys);
 
+// console.log(seed);
 // generateTronAccount("end tonight viable energy mother keep one phrase excite evolve exclude carbon").then((data) => console.log(data));
 getTronTransactionHistory("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => {
   // console.log(data)
-  // for (let i = 0; i < data["normalTransaction"]['data'].length; i++) {
-  //   console.log(data["normalTransaction"]['data'][i]["raw_data"]);
-  //   console.log(data["normalTransaction"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
-  // }
+  for (let i = 0; i < data["normalTransaction"]['data'].length; i++) {
+    console.log(data["normalTransaction"]['data'][i]);
+    // console.log(data["normalTransaction"]['data'][i]["raw_data"]);
+    // console.log(data["normalTransaction"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
+  }
   console.log(data["trc20TransactionData"]['data'])
   // for (let i = 0; i < data["trc20TransactionData"]['data'].length; i++) {
     // console.log(data["trc20TransactionData"]['data'][i]["raw_data"]);
