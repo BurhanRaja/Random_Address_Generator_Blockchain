@@ -79,29 +79,29 @@ async function getTronAccountBalance(address) {
 //   };
 // }
 
-// function generateBitcoinAddressFromMnemonic(mnemonic) {
-//   const seed = bip39.mnemonicToSeedSync(mnemonic);
-//   const bip32 = BIP32Factory(ecc);
+function generateBitcoinAddressFromMnemonic(mnemonic) {
+  const seed = bip39.mnemonicToSeedSync(mnemonic);
+  const bip32 = BIP32Factory(ecc);
 
-//   const rootNode = bip32.fromSeed(seed);
-//   const childNode = rootNode.derivePath("m/0/0"); // Derive a specific child node (change as needed)
+  const rootNode = bip32.fromSeed(seed);
+  const childNode = rootNode.derivePath("m/0/0"); // Derive a specific child node (change as needed)
 
-//   const ECPair = ECPairFactory(ecc);
+  const ECPair = ECPairFactory(ecc);
 
-//   const privateKey = childNode.privateKey.toString("hex");
-//   const publicKey = ECPair.fromPrivateKey(
-//     childNode.privateKey
-//   ).publicKey.toString("hex");
-//   const address = bitcoin.payments.p2pkh({
-//     pubkey: childNode.publicKey,
-//   }).address;
+  const privateKey = childNode.privateKey.toString("hex");
+  const publicKey = ECPair.fromPrivateKey(
+    childNode.privateKey
+  ).publicKey.toString("hex");
+  const address = bitcoin.payments.p2pkh({
+    pubkey: childNode.publicKey,
+  }).address;
 
-//   return {
-//     privateKey,
-//     publicKey,
-//     address,
-//   };
-// }
+  return {
+    privateKey,
+    publicKey,
+    address,
+  };
+}
 
 // const mnemonic = generateMnemonicPhrase();
 // console.log(mnemonic);
@@ -112,8 +112,8 @@ const seed = ethers.Mnemonic.fromPhrase(
 // const bnbKeys = generateBNBKeysFromMnemonic(seed);
 // console.log(bnbKeys);
 
-// const bitcoinKeys = generateBitcoinAddressFromMnemonic(mnemonic);
-// console.log(bitcoinKeys);
+const bitcoinKeys = generateBitcoinAddressFromMnemonic("end tonight viable energy mother keep one phrase excite evolve exclude carbon");
+console.log(bitcoinKeys);
 
 // const ethreumKeys = generateEthereumFromMnemonic(seed);
 // console.log(ethreumKeys);

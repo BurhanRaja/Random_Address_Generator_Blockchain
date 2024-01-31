@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "currency_name": "Bitcoin",
+      "symbol": "BTC",
+      "keyType": "Coin",
+      "chain": "bitcoin"
+    },
+    {
+      "currency_name": "Eth",
+      "symbol": "ETH",
+      "keyType": "Coin",
+      "chain": "ethereum"
+    },
+    {
+      "currency_name": "Tether USD",
+      "symbol": "USDT",
+      "keyType": "ERC-20",
+      "chain": "ethereum"
+    },
+    {
+      "currency_name": "Tether USD",
+      "symbol": "USDT",
+      "keyType": "ERC-20",
+      "chain": "tron"
+    },
+    {
+      "currency_name": "Tether USD",
+      "symbol": "USDT",
+      "keyType": "ERC-20",
+      "chain": "bsc"
+    },
+    {
+      "currency_name": "Tether USD",
+      "symbol": "USDT",
+      "keyType": "ERC-20",
+      "chain": "polygon"
+    }
+  ]
+}
