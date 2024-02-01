@@ -15,25 +15,25 @@
     {
       "currency_name": "Tether USD",
       "symbol": "USDT",
-      "keyType": "ERC-20",
+      "keyType": "Token",
       "chain": "ethereum"
     },
     {
       "currency_name": "Tether USD",
       "symbol": "USDT",
-      "keyType": "ERC-20",
+      "keyType": "Token",
       "chain": "tron"
     },
     {
       "currency_name": "Tether USD",
       "symbol": "USDT",
-      "keyType": "ERC-20",
+      "keyType": "Token",
       "chain": "bsc"
     },
     {
       "currency_name": "Tether USD",
       "symbol": "USDT",
-      "keyType": "ERC-20",
+      "keyType": "Token",
       "chain": "polygon"
     }
   ]

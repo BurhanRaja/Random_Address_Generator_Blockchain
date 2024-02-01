@@ -1,0 +1,22 @@
+{
+    "addressEth": {
+        "privateKey": "0xbde96d344b2faa1387e8a11d62231ef6c1b5fdc87d1c7842078f5430b5154188",
+        "publicKey": "0x029f8c0e6f8bb281981adf8bf410a128fa5e871f7f2dc09ee2d01dd96dec4e9440",
+        "address": "0xE4862826EA764204BAC84e0b0267F301Ad9D1f8f"
+    },
+    "addressBitcoin": {
+        "privateKey": "58827fa9ae19e358262789d7275717a59108dff718fef176e5ebdf0e793a3278",
+        "publicKey": "03b84f697c4b22fc94a70c4b7d789d4d7ef480159b00b33afffc448643ec5d3cbf",
+        "address": "1JS7ByUj4uvQz6tY3jya3G85TZNV8DYdrY"
+    },
+    "addressTron": {
+        "address": "TJVynkYGXJHBpfX19Cb5ruLiZ1W3mWth6g",
+        "privateKey": "0x95e25829e9d6c84365cb74a31e26795fc1c2f8d229e0c4cf225674b49a5f981d",
+        "publicKey": "0x04e3c256d03e0a59b008a7d8c7d2af84c41c05f7f497cc57030ff29d08d5ab7aa1a10a2db8ac303e7c9fb727d5d0a7c735fac5ddd8975ed6e7f1cdd7701b40595b"
+    },
+    "addressBsc": {
+        "privateKey": "0x7f3a5b5e11376c0c037c96609ab8589d87449b8e59bd24a4637a2ee246d4d308",
+        "publicKey": "0x037ca11d54caaabe20d72f7ccfbf9a9983e372f38cd32463cad28c95cbf889640b",
+        "address": "0x83289d451A7128881Ecc509e717a833Bd63A1392"
+    }
+}

@@ -16,6 +16,7 @@
     "bip39": "^3.1.0",
     "bitcoinjs-lib": "^6.1.5",
     "bitcore-lib-ltc": "^10.0.21",
+    "dotenv": "^16.4.1",
     "ecpair": "^2.1.0",
     "elliptic": "^6.5.4",
     "ethers": "^6.10.0",
@@ -23,7 +24,8 @@
     "js-base64": "^3.7.6",
     "secp256k1": "^5.0.0",
     "tiny-secp256k1": "^2.2.3",
-    "tronweb": "^5.3.1"
+    "tronweb": "^5.3.1",
+    "web3": "^4.4.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"

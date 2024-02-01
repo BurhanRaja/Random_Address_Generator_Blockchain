@@ -59,9 +59,24 @@ async function getTronTransactionHistory(address) {
   }
 }
 
+async function getTokenBalance(address) {
+  try {
+
+    tronWeb.setAddress("TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj");
+    const contract = await tronWeb.contract().at("TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj");
+    const balance = await contract.balanceOf(address).call();
+
+    return balance.toNumber();
+  } catch (error) {
+    console.error('Error fetching token balance:', error);
+    return 0;
+  }
+}
+
 async function getTronAccountBalance(address) {
   try {
     const response = await tronWeb.trx.getBalance(address);
+
     return (tronWeb.BigNumber(response)).toNumber();
   } catch (err) {
     throw err;
@@ -103,35 +118,40 @@ function generateBitcoinAddressFromMnemonic(mnemonic) {
   };
 }
 
-// const mnemonic = generateMnemonicPhrase();
-// console.log(mnemonic);
+const mnemonic = generateMnemonicPhrase();
+console.log(mnemonic);
 
-const seed = ethers.Mnemonic.fromPhrase(
-  "end tonight viable energy mother keep one phrase excite evolve exclude carbon"
-);
+// const seed = ethers.Mnemonic.fromPhrase(
+//   "end tonight viable energy mother keep one phrase excite evolve exclude carbon"
+// );
 // const bnbKeys = generateBNBKeysFromMnemonic(seed);
 // console.log(bnbKeys);
 
-const bitcoinKeys = generateBitcoinAddressFromMnemonic("end tonight viable energy mother keep one phrase excite evolve exclude carbon");
-console.log(bitcoinKeys);
+// const bitcoinKeys = generateBitcoinAddressFromMnemonic("end tonight viable energy mother keep one phrase excite evolve exclude carbon");
+// console.log(bitcoinKeys);
 
 // const ethreumKeys = generateEthereumFromMnemonic(seed);
 // console.log(ethreumKeys);
 
 // console.log(seed);
 // generateTronAccount("end tonight viable energy mother keep one phrase excite evolve exclude carbon").then((data) => console.log(data));
-getTronTransactionHistory("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => {
+// getTronTransactionHistory("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => {
   // console.log(data)
-  for (let i = 0; i < data["normalTransaction"]['data'].length; i++) {
-    console.log(data["normalTransaction"]['data'][i]);
-    // console.log(data["normalTransaction"]['data'][i]["raw_data"]);
-    // console.log(data["normalTransaction"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
-  }
-  console.log(data["trc20TransactionData"]['data'])
+  // for (let i = 0; i < data["normalTransaction"]['data'].length; i++) {
+  //   console.log(data["normalTransaction"]['data'][i]);
+  //   console.log(data["normalTransaction"]['data'][i]["raw_data"]);
+  //   console.log(data["normalTransaction"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
+  // }
+  // console.log(data["trc20TransactionData"]['data'])
   // for (let i = 0; i < data["trc20TransactionData"]['data'].length; i++) {
     // console.log(data["trc20TransactionData"]['data'][i]["raw_data"]);
     // console.log(data["trc20TransactionData"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
   // }
-});
-getTronAccountBalance("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => console.log("Balance", data));
-console.log(tronWeb.address.toHex("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT"));
+// });
+// getTronAccountBalance("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => console.log("Balance", data)).catch((err) => console.log(err));
+// console.log(tronWeb.address.toHex("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT"));
+
+// (async() => {
+//   const data = await getTokenBalance("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT")
+//   console.log(data);
+// })()
