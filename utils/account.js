@@ -4,13 +4,6 @@ const { BIP32Factory } = require("bip32");
 const ethers = require("ethers");
 const bitcoin = require("bitcoinjs-lib");
 const { ECPairFactory } = require("ecpair");
-const TronWeb = require("tronweb");
-
-const HttpProvider = TronWeb.providers.HttpProvider;
-const fullNode = new HttpProvider("https://nile.trongrid.io/");
-const solidityNode = new HttpProvider("https://nile.trongrid.io/");
-const eventServer = "https://nile.trongrid.io/";
-const tronWeb = new TronWeb(fullNode, solidityNode, eventServer);
 
 // BNB Chain Create Account
 exports.generateBNBKeysFromMnemonic = (mnemonic, index) => {
@@ -64,7 +57,7 @@ exports.generateBitcoinAddressFromMnemonic = (mnemonic, index) => {
 };
 
 // Tron Create Account
-exports.generateTronAccount = (mnemonic, index) => {
+exports.generateTronAccount = (mnemonic, index, tronWeb) => {
   const path = `m/44'/195'/0'/0/${index}`;
   const data = tronWeb.fromMnemonic(mnemonic, path);
 
