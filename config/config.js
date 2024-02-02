@@ -29,4 +29,8 @@ module.exports = {
     secretKeyOne: process.env.SECRET_ENCRYPTION_KEY_1,
     secretKeyTwo: process.env.SECRET_ENCRYPTION_KEY_2,
     secretKeyThree: process.env.SECRET_ENCRYPTION_KEY_3,
+
+    secretJwtKey: process.env.SECRET_JWT_KET,
+
+    secretKeys: [process.env.SECRET_ENCRYPTION_KEY_1, process.env.SECRET_ENCRYPTION_KEY_2, process.env.SECRET_ENCRYPTION_KEY_3]
 }

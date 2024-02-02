@@ -16,7 +16,7 @@ const {
 } = require("../config/config");
 const axios = require("axios");
 
-// Get TestNet Address Balance 
+// Get TestNet Address Balance
 exports.getTestBalance = async (
   type,
   chain,
@@ -104,138 +104,136 @@ exports.getTestBalance = async (
         `${bitcoinMainApiUrl}/address/${address}`
       );
       if (responseNormal?.data["balanceSat"]) {
-            balance = responseNormal?.data["balanceSat"]
+        balance = responseNormal?.data["balanceSat"];
+      }
+      break;
+  }
+  
+  if (chain === "tron") {
+    if (type === "coin") {
+      const response = await tronWeb.trx.getBalance(address);
+      const bigNum = tronWeb.BigNumber(response);
+      balance = bigNum.toNumber();
+    }
+    if (type === "token") {
+      tronWeb.setAddress(contractAddress);
+      const contract = await tronWeb.contract().at(contractAddress);
+      const balance = await contract.balanceOf(address).call();
+    }
+  }
+
+  return balance;
+};
+
+// Get MainNet Address Balance
+exports.getMainBalance = async (
+  type,
+  chain,
+  address,
+  contractAddress,
+  tronWeb
+) => {
+  let balance = 0;
+
+  switch (chain) {
+    case chain === "ethereum":
+      if (type === "coin") {
+        const responseNormal = await axios.get(
+          `${etherMainApiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${etherScanApiKey}`
+        );
+        if (
+          responseNormal?.data?.status === "1" &&
+          responseNormal?.data?.message === "OK"
+        ) {
+          balance = responseNormal?.data?.result;
+        }
+      }
+      if (type === "token") {
+        const responseToken = await axios.get(
+          `${etherMainApiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${etherScanApiKey}`
+        );
+        if (
+          responseToken?.data?.status === "1" &&
+          responseToken?.data?.message === "OK"
+        ) {
+          balance = responseNormal?.data?.result;
+        }
+      }
+      break;
+    case chain === "polygon":
+      if (type === "coin") {
+        const responseNormal = await axios.get(
+          `${polygonMainApiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${polygonScanApiKey}`
+        );
+        if (
+          responseNormal?.data?.status === "1" &&
+          responseNormal?.data?.message === "OK"
+        ) {
+          balance = responseNormal?.data?.result;
+        }
+      }
+      if (type === "token") {
+        const responseToken = await axios.get(
+          `${polygonMainApiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${polygonScanApiKey}`
+        );
+        if (
+          responseToken?.data?.status === "1" &&
+          responseToken?.data?.message === "OK"
+        ) {
+          balance = responseNormal?.data?.result;
+        }
+      }
+      break;
+    case chain === "bsc":
+      if (type === "coin") {
+        const responseNormal = await axios.get(
+          `${bscMainApiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${bscScanApiKey}`
+        );
+        if (
+          responseNormal?.data?.status === "1" &&
+          responseNormal?.data?.message === "OK"
+        ) {
+          balance = responseNormal?.data?.result;
+        }
+      }
+      if (type === "token") {
+        const responseToken = await axios.get(
+          `${bscMainApiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${bscScanApiKey}`
+        );
+        if (
+          responseToken?.data?.status === "1" &&
+          responseToken?.data?.message === "OK"
+        ) {
+          balance = responseNormal?.data?.result;
+        }
+      }
+      break;
+    case chain === "bitcoin":
+      const responseNormal = await axios.get(
+        `${bitcoinMainApiUrl}/address/${address}`
+      );
+      if (responseNormal?.data["balanceSat"]) {
+        balance = responseNormal?.data["balanceSat"];
       }
       break;
     case chain === "tron":
-        if (type === "coin") {
-            const response = await tronWeb.trx.getBalance(address);
-            const bigNum = tronWeb.BigNumber(response)
-            balance = bigNum.toNumber();
-        }
-        if (type === "token") {
-            tronWeb.setAddress(contractAddress);
-            const contract = await tronWeb.contract().at(contractAddress);
-            const balance = await contract.balanceOf(address).call();      
-        }
-        break;
+      if (type === "coin") {
+        const response = await tronWeb.trx.getBalance(address);
+        const bigNum = tronWeb.BigNumber(response);
+        balance = bigNum.toNumber();
+      }
+      if (type === "token") {
+        tronWeb.setAddress(contractAddress);
+        const contract = await tronWeb.contract().at(contractAddress);
+        const balance = await contract.balanceOf(address).call();
+      }
+      break;
     default:
       break;
   }
 
   return balance;
 };
-
-// Get MainNet Address Balance 
-exports.getMainBalance = async (
-    type,
-    chain,
-    address,
-    contractAddress,
-    tronWeb
-  ) => {
-    let balance = 0;
-  
-    switch (chain) {
-      case chain === "ethereum":
-        if (type === "coin") {
-          const responseNormal = await axios.get(
-            `${etherMainApiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${etherScanApiKey}`
-          );
-          if (
-            responseNormal?.data?.status === "1" &&
-            responseNormal?.data?.message === "OK"
-          ) {
-            balance = responseNormal?.data?.result;
-          }
-        }
-        if (type === "token") {
-          const responseToken = await axios.get(
-            `${etherMainApiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${etherScanApiKey}`
-          );
-          if (
-            responseToken?.data?.status === "1" &&
-            responseToken?.data?.message === "OK"
-          ) {
-            balance = responseNormal?.data?.result;
-          }
-        }
-        break;
-      case chain === "polygon":
-        if (type === "coin") {
-          const responseNormal = await axios.get(
-            `${polygonMainApiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${polygonScanApiKey}`
-          );
-          if (
-            responseNormal?.data?.status === "1" &&
-            responseNormal?.data?.message === "OK"
-          ) {
-            balance = responseNormal?.data?.result;
-          }
-        }
-        if (type === "token") {
-          const responseToken = await axios.get(
-            `${polygonMainApiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${polygonScanApiKey}`
-          );
-          if (
-            responseToken?.data?.status === "1" &&
-            responseToken?.data?.message === "OK"
-          ) {
-            balance = responseNormal?.data?.result;
-          }
-        }
-        break;
-      case chain === "bsc":
-        if (type === "coin") {
-          const responseNormal = await axios.get(
-            `${bscMainApiUrl}?module=account&action=balance&address=${address}&tag=latest&apikey=${bscScanApiKey}`
-          );
-          if (
-            responseNormal?.data?.status === "1" &&
-            responseNormal?.data?.message === "OK"
-          ) {
-            balance = responseNormal?.data?.result;
-          }
-        }
-        if (type === "token") {
-          const responseToken = await axios.get(
-            `${bscMainApiUrl}?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${address}&tag=latest&apikey=${bscScanApiKey}`
-          );
-          if (
-            responseToken?.data?.status === "1" &&
-            responseToken?.data?.message === "OK"
-          ) {
-            balance = responseNormal?.data?.result;
-          }
-        }
-        break;
-      case chain === "bitcoin":
-        const responseNormal = await axios.get(
-          `${bitcoinMainApiUrl}/address/${address}`
-        );
-        if (responseNormal?.data["balanceSat"]) {
-              balance = responseNormal?.data["balanceSat"]
-        }
-        break;
-      case chain === "tron":
-          if (type === "coin") {
-              const response = await tronWeb.trx.getBalance(address);
-              const bigNum = tronWeb.BigNumber(response)
-              balance = bigNum.toNumber();
-          }
-          if (type === "token") {
-              tronWeb.setAddress(contractAddress);
-              const contract = await tronWeb.contract().at(contractAddress);
-              const balance = await contract.balanceOf(address).call();      
-          }
-          break;
-      default:
-        break;
-    }
-  
-    return balance;
-  };
-  
 
 // base58:{
 //     hash:"22c17a06117b40516f9826804800003562e834c9",
@@ -259,4 +257,3 @@ exports.getMainBalance = async (
 //         "balanceSat":759000,
 //         "request":{"limit":10,"offset":0,"sort":"desc"}
 //     }
-

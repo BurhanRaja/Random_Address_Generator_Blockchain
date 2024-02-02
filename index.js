@@ -1,8 +1,5 @@
 const express = require("express");
 const TronWeb = require("tronweb");
-const { hashPassword, generateMnemonicPhrase } = require("./utils/wallet");
-const { encryptAES } = require("./utils/aes");
-const { Web3 } = require("web3");
 const { getTestTransactions } = require("./utils/transaction");
 const {
   ethereumTestContractAddress,
@@ -12,9 +9,6 @@ const {
   polygonTestContractAddress,
   bscTestContractAddress,
   tronTestContractAddress,
-  secretKeyOne,
-  secretKeyTwo,
-  secretKeyThree,
   tronTestApiUrl
 } = require("./config/config");
 const { getTestBalance } = require("./utils/balance");
@@ -24,9 +18,21 @@ const {
   generateBNBKeysFromMnemonic,
   generateTronAccount,
 } = require("./utils/account");
+const db = require("./db/db");
+
+// API Functions
+const createWallet = require("./controller/createWallet");
+const showPhrase = require("./controller/showPhrase");
+const login = require("./controller/login");
+const { getTestTransactionHistory, getMainTransactionHistory } = require("./controller/transaction");
 
 const app = express();
-const port = 8000;
+const port = 8080;
+
+// DB Sync
+db.sequelize.sync().then(() => {
+  console.log("Database Connected.");
+});
 
 app.use(express.json());
 
@@ -42,85 +48,16 @@ app.get("/", async (req, res) => {
   });
 });
 
-app.post("/createwallet", async (req, res) => {
-  let success = false;
-  try {
-    const { password } = req.body;
 
-    const securePassword = await hashPassword(password);
-    console.log(securePassword);
+app.post("/createwallet", createWallet);
 
-    const seedPhrase = generateMnemonicPhrase();
+app.post("/login", login);
 
-    console.log(seedPhrase);
-    
-    const encryptedSeed = await encryptAES(seedPhrase, Uint8Array.from(secretKeyOne.split(",").map((e) => parseInt(e, 10))));
-    console.log(encryptedSeed);
+app.post("/showphrase", showPhrase);
 
-    // add To Database - Remaining
+app.get("/test/transactionhistory", getTestTransactionHistory);
 
-    success = true;
-    return res.status(200).send({
-      status: 200,
-      success,
-      walletSeed: seedPhrase,
-      message: "Wallet created Successfully.",
-    });
-  } catch (err) {
-    console.log(err);
-    return res.status(500).send({
-      status: 500,
-      success,
-      message: "Internal Server Error.",
-    });
-  }
-});
-
-app.post("/showphrase", async (req, res) => {});
-
-app.get("/test/transactionhistory", async (req, res) => {
-  let success = false;
-  try {
-    const { type, chain, address, page, offset } = req.query;
-
-    let contractAddress = "";
-
-    if (type === "token") {
-      contractAddress =
-        chain === "ethereum"
-          ? ethereumTestContractAddress
-          : chain === "polygon"
-          ? polygonTestContractAddress
-          : chain === "bsc"
-          ? bscTestContractAddress
-          : chain === "tron"
-          ? tronTestContractAddress
-          : "";
-    }
-
-    const transactions = await getTestTransactions(
-      type,
-      chain,
-      address,
-      page,
-      offset,
-      contractAddress
-    );
-
-    success = true;
-    return res.status(200).send({
-      status: 200,
-      success,
-      data: transactions,
-    });
-  } catch (err) {
-    return res.status(500).send({
-      status: 500,
-      success,
-      message: "Internal Server Error.",
-    });
-  }
-});
+app.get("/transactionhistory", getMainTransactionHistory);
 
 app.get("/test/balance", async (req, res) => {
   let success = false;
@@ -167,8 +104,6 @@ app.post("/createaccount/:keytype/:chain", async (req, res) => {
     const { keytype, chain } = req.params;
 
     let address = "";
-
-    console.log(chain);
 
     if (chain === "ethereum") {
       address = generateEthereumFromMnemonic(mnemonic, 2);
