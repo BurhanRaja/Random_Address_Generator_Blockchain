@@ -3,6 +3,7 @@ const { encryptAES } = require("../utils/aes");
 const { secretKeys } = require("../config/config");
 const { wallet } = require("../db/db");
 const { v4: uuid } = require("uuid");
+const { generateMnemonicPhrase } = require("../utils/wallet")
 
 const Wallet = wallet;
 
@@ -57,8 +58,6 @@ module.exports = async (req, res) => {
       encryption: randomSecretNumber,
     });
 
-    
-
     success = true;
     return res.status(200).send({
       status: 200,
@@ -67,6 +66,7 @@ module.exports = async (req, res) => {
       message: "Wallet created Successfully.",
     });
   } catch (err) {
+    console.log(err);
     return res.status(500).send({
       status: 500,
       success,

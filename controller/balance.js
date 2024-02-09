@@ -7,19 +7,19 @@ const {
   bscTestContractAddress,
   tronTestContractAddress,
   ethereumMainContractAddress,
+  tronMainApiUrl,
+  tronTestApiUrl,
 } = require("../config/config");
-const {
-  getTestTransactions,
-  getMainTransactions,
-} = require("../utils/transaction");
+const TronWeb = require("tronweb");
+const { getTestBalance, getMainBalance } = require("../utils/balance");
 const { address } = require("../db/db");
 
 const Address = address;
 
-exports.getTestTransactionHistory = async (req, res) => {
+exports.getTestBalanceFromAddress = async (req, res) => {
   let success = false;
   try {
-    const { type, chain, address, page, offset } = req.query;
+    const { type, chain, address } = req.query;
 
     let contractAddress = "";
 
@@ -36,34 +36,57 @@ exports.getTestTransactionHistory = async (req, res) => {
           : "";
     }
 
-    const transactions = await getTestTransactions(
+    const HttpProvider = TronWeb.providers.HttpProvider;
+    const fullNode = new HttpProvider(tronTestApiUrl);
+    const solidityNode = new HttpProvider(tronTestApiUrl);
+    const eventServer = tronTestApiUrl;
+    const tronWeb = new TronWeb(fullNode, solidityNode, eventServer);
+
+    const balance = await getTestBalance(
       type,
       chain,
       address,
-      page,
-      offset,
-      contractAddress
+      contractAddress,
+      tronWeb
     );
 
     success = true;
     return res.status(200).send({
       status: 200,
       success,
-      data: transactions,
+      data: {
+        balance,
+      },
     });
   } catch (err) {
+    console.log(err);
     return res.status(500).send({
       status: 500,
       success,
-      message: "Internal Server Error.",
+      message: "Internal Server Error",
     });
   }
 };
 
-exports.getMainTransactionHistory = async (req, res) => {
+exports.getMainBalanceFromAddress = async (req, res) => {
   let success = false;
   try {
-    const { type, chain, address, page, offset } = req.query;
+    const { type, chain, address } = req.query;
+
+    const addressCheck = await Address.findOne({
+      where: {
+        address,
+        walletId: req.wallet.id,
+      },
+    });
+
+    if (!addressCheck) {
+      return res.status(400).send({
+        status: 400,
+        success,
+        message: "Address not found in Wallet.",
+      });
+    }
 
     let contractAddress = "";
 
@@ -80,26 +103,27 @@ exports.getMainTransactionHistory = async (req, res) => {
           : "";
     }
 
-    const transactions = await getMainTransactions(
-      type,
-      chain,
-      address,
-      page,
-      offset,
-      contractAddress
-    );
+    const HttpProvider = TronWeb.providers.HttpProvider;
+    const fullNode = new HttpProvider(tronMainApiUrl);
+    const solidityNode = new HttpProvider(tronMainApiUrl);
+    const eventServer = tronMainApiUrl;
+    const tronWeb = new TronWeb(fullNode, solidityNode, eventServer);
+
+    const balance = await getMainBalance(type, chain, address, contractAddress, tronWeb);
 
     success = true;
     return res.status(200).send({
       status: 200,
       success,
-      data: transactions,
+      data: {
+        balance,
+      },
     });
   } catch (err) {
     return res.status(500).send({
       status: 500,
       success,
-      message: "Internal Server Error.",
+      message: "Internal Server Error",
     });
   }
 };

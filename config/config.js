@@ -16,6 +16,14 @@ module.exports = {
     bscTestApiUrl: process.env.BSC_TESTNET_API_URL,
     tronTestApiUrl: process.env.TRON_TESTNET_API_URL,
 
+    ethereumTestTransactionUrl: process.env.ETHEREUM_TRANSACTION_TESTNET_RPC_URL,
+    polygonTestTransactionUrl: process.env.POLYGON_TRANSACTION_TESTNET_RPC_URL,
+    bscTestTransactionUrl: process.env.BSC_TRANSACTION_TESTNET_RPC_URL,
+
+    ethereumMainTransactionUrl: process.env.ETHEREUM_TRANSACTION_MAINNET_RPC_URL,
+    polygonMainTransactionUrl: process.env.POLYGON_TRANSACTION_MAINNET_RPC_URL,
+    bscMainTransactionUrl: process.env.BSC_TRANSACTION_MAINNET_RPC_URL,
+
     ethereumTestContractAddress: process.env.ETHEREUM_TESTNET_USDT_CONTRACT_ADDRESS,
     polygonTestContractAddress: process.env.POLYGON_TESTNET_USDT_CONTRACT_ADDRESS,
     bscTestContractAddress: process.env.BSC_TESTNET_USDT_CONTRACT_ADDRESS,

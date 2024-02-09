@@ -8,7 +8,7 @@ const { ECPairFactory } = require("ecpair");
 // BNB Chain Create Account
 exports.generateBNBKeysFromMnemonic = (mnemonic, index) => {
   const seed = ethers.Mnemonic.fromPhrase(mnemonic);
-  const path = `m/44'/60'/0'/0/${index}`;
+  const path = `44'/714'/0'/0/0/${index}`;
   const wallet = ethers.HDNodeWallet.fromMnemonic(seed, path);
 
   return {

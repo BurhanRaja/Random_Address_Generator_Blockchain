@@ -18,5 +18,9 @@
         "privateKey": "0x7f3a5b5e11376c0c037c96609ab8589d87449b8e59bd24a4637a2ee246d4d308",
         "publicKey": "0x037ca11d54caaabe20d72f7ccfbf9a9983e372f38cd32463cad28c95cbf889640b",
         "address": "0x83289d451A7128881Ecc509e717a833Bd63A1392"
+    },
+    "addressBitcoinTest": {
+        "address": "mpsLDWQKRcBViHGhDoEdD5NAYFXi1fCaqD",
+        "privateKey": "03d7f338347216363a24dba5241744c6c12cc7d3d29ab51c3fb50a174fbe14faea"
     }
 }

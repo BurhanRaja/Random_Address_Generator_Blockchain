@@ -61,7 +61,6 @@ async function getTronTransactionHistory(address) {
 
 async function getTokenBalance(address) {
   try {
-
     tronWeb.setAddress("TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj");
     const contract = await tronWeb.contract().at("TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj");
     const balance = await contract.balanceOf(address).call();
@@ -118,8 +117,19 @@ function generateBitcoinAddressFromMnemonic(mnemonic) {
   };
 }
 
-const mnemonic = generateMnemonicPhrase();
-console.log(mnemonic);
+const generateBitcoinTestnet = () => {
+  const ECPair = ECPairFactory(ecc);
+  const keyPair = ECPair.makeRandom({ network: bitcoin.networks.testnet });
+// Get the public key hash (P2PKH address)
+const address = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network: bitcoin.networks.testnet });
+console.log(new Buffer.from(address.pubkey).toString("hex"))
+console.log(address.address)
+}
+
+generateBitcoinTestnet();
+
+// const mnemonic = generateMnemonicPhrase();
+// console.log(mnemonic);
 
 // const seed = ethers.Mnemonic.fromPhrase(
 //   "end tonight viable energy mother keep one phrase excite evolve exclude carbon"
@@ -148,7 +158,7 @@ console.log(mnemonic);
     // console.log(data["trc20TransactionData"]['data'][i]["raw_data"]["contract"][0]["parameter"]);
   // }
 // });
-// getTronAccountBalance("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT").then((data) => console.log("Balance", data)).catch((err) => console.log(err));
+// getTronAccountBalance("TJVynkYGXJHBpfX19Cb5ruLiZ1W3mWth6g").then((data) => console.log("Balance", data)).catch((err) => console.log(err));
 // console.log(tronWeb.address.toHex("TSVfvUWaX8BRyuXAT7hHAAQkXPEHjFWKNT"));
 
 // (async() => {

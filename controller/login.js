@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
       },
     });
 
-    if (wallet) {
+    if (!wallet) {
       return res.status(404).send({
         status: 404,
         success,

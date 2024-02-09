@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
 
     const seedPhrase = await decryptAES(
       wallet.seedphrase,
-      secretKeys[wallet.encryption]
+      Uint8Array.from(secretKeys[wallet.encryption].split(",").map((e) => parseInt(e, 10)))
     );
 
     success = true;

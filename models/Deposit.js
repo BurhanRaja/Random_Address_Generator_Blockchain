@@ -13,7 +13,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       chain: DataTypes.STRING,
       amountDecimal: DataTypes.INTEGER,
-      amountBigNumber: DataTypes.INTEGER,
+      amountBigNumber: DataTypes.BIGINT,
     },
     {
       timestamps: true,

@@ -1,3 +1,4 @@
+const { response } = require("express");
 const {
   etherScanApiKey,
   polygonScanApiKey,
@@ -197,13 +198,14 @@ exports.getMainTransactions = async (
     const responseNormal = await axios.get(
       `${bitcoinMainApiUrl}/address/${address}`
     );
-    if (responseNormal?.data["txHistory"]) {
+    if (responseNormal?.status === 200, responseNormal?.data["txHistory"]) {
       for (const tx of responseNormal?.data["txHistory"]["txids"]) {
-        const response = await axios.get(`${bitcoinMainApiUrl}//tx/${address}`);
+        const response = await axios.get(`${bitcoinMainApiUrl}/tx/${tx}`);
         transactions.push(response);
       }
     }
   }
+
   if (chain === "bsc") {
     if (type === "coin") {
       const responseNormal = await axios.get(

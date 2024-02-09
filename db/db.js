@@ -39,5 +39,6 @@ db.sequelize = sequelize;
 db.wallet = require("../models/Wallet")(sequelize);
 db.address = require("../models/Address")(sequelize);
 db.deposit = require("../models/Deposit")(sequelize);
+db.withdraw = require("../models/Withdraw")(sequelize);
 
 module.exports = db;
